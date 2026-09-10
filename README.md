@@ -260,8 +260,11 @@ Two things the schema is deliberate about:
   `matched_prediction_frac` (a lower bound on precision) and
   `unmatched_prediction_ids` — there is no region-level `precision` field.
 
+**[docs/METRICS.md](docs/METRICS.md) explains every field of a `benchmark.json`,
+in JSON key order** — open a result beside it and read down. Start there if you
+are interpreting a number rather than producing one.
 See `docs/ARCHITECTURE.md` → "Metrics — methodological choices" for the full
-rationale.
+rationale behind the schema.
 
 ### Smoke test with mock data
 
@@ -834,6 +837,7 @@ pixi run pytest
 ├── data
 ├── docs
 │   ├── BENCHMARK_SCOPES.md               # the genome pool, every scope carved from it, and how to build both
+│   ├── METRICS.md                        # field-by-field companion for reading a benchmark.json
 │   ├── NCBI_MIRROR.md                    # why the benchmark downloads instead of reading the cluster mirror
 │   ├── sharp_dag.html
 │   └── sharp_pipeline.html

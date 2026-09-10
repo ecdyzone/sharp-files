@@ -102,6 +102,10 @@ cases defensively (return 0) but no data type should store invalid coordinates.
 
 ## Metrics — methodological choices
 
+> This section is the *rationale*. For a field-by-field walkthrough of an
+> actual `benchmark.json`, aimed at readers who have not read the code, see
+> [METRICS.md](METRICS.md).
+
 ### Scope: recall counts only contigs that were analyzed
 
 Ground truth spans a database; a run spans one assembly. Recall is measured over

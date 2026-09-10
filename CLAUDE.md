@@ -550,7 +550,9 @@ python -m sharp.evaluate \
     --output data/processed/benchmark_sharp.json
 ```
 
-Reading the output (`benchmark.json`, see `docs/ARCHITECTURE.md` → "Metrics"):
+Reading the output (`benchmark.json`). **`docs/METRICS.md` is the field-by-field
+companion** — every key in JSON order, written for someone who has not read the
+code; `docs/ARCHITECTURE.md` → "Metrics" has the rationale behind the schema:
 
 | block | what it answers |
 |---|---|
@@ -563,6 +565,9 @@ Reading the output (`benchmark.json`, see `docs/ARCHITECTURE.md` → "Metrics"):
 `matched_prediction_frac` is a **lower bound** on precision, not precision — the
 ground truth is incomplete, so an unmatched prediction is unvalidated rather than
 wrong. There is deliberately no region-level `precision` or `false_positive` field.
+
+When a metric is added, renamed, or its meaning changes, update `docs/METRICS.md`
+in the same commit — it is the document coworkers read a result with.
 
 ---
 
